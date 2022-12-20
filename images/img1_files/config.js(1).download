@@ -1,0 +1,6 @@
+
+window[window["TiktokAnalyticsObject"]].instance("C6EJP48N3BRG7LOJ1J80").setAdvancedMatchingAvailableProperties({"email":true,"phone_number":true,"auto_email":false,"auto_phone_number":false});
+window[window["TiktokAnalyticsObject"]].instance("C6EJP48N3BRG7LOJ1J80").setPixelInfo && window[window["TiktokAnalyticsObject"]].instance("C6EJP48N3BRG7LOJ1J80").setPixelInfo({status: 0, name: "BYJU\'S FutuSchool BR", advertiserID: "7033435805834166274", setupMode: 1, partner: "", is_onsite: false });
+window[window["TiktokAnalyticsObject"]].setPCMDomain && window[window["TiktokAnalyticsObject"]].setPCMDomain("byjusfutureschool.com");
+window[window["TiktokAnalyticsObject"]].setPCMConfig && window[window["TiktokAnalyticsObject"]].setPCMConfig(null);
+window[window["TiktokAnalyticsObject"]].enableFirstPartyCookie && window[window["TiktokAnalyticsObject"]].enableFirstPartyCookie(true);

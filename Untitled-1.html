@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <title>Wizard 1</title>
+  </head>
+  <body>
+    
+        <section>
+            <div class="container mx-auto hidden lg:block">
+                <div class="flex justify-between md:space-x-2 lg:space-x-0">
+                    <div class="w-3/12">
+                        <button class="focus:text-gray-800 text-gray-700 lg:w-full md:w-52 flex flex-col items-start" onclick="myFunction(0)">
+                            <div class="flex custom-header">
+                                <p class="text-lg leading-4">1</p>
+                                <p class="text-lg ml-2.5 leading-4">Organization</p>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-3 mt-2 xl:ml-4 text-left xl:pr-0 md:pr-4">Add your organization name and logo</p>
+                            <p class="custom-border border-b border-gray-300 mt-4 w-full"></p>
+                        </button>
+                    </div>
+
+                    <div class="w-3/12 xl:pl-0 md:pl-4">
+                        <button class="focus:text-gray-800 text-gray-700 lg:w-full md:w-52 flex flex-col items-start" onclick="myFunction(1)">
+                            <div class="flex custom-header">
+                                <p class="text-lg leading-4">2</p>
+                                <p class="text-lg ml-2.5 leading-4">Create a collection</p>
+                            </div>
+                            <p class="text-sm leading-3 text-gray-600 mt-2 xl:ml-4 text-left">Add your organization name and logo</p>
+                            <div class="custom-border border-b border-gray-300 mt-4 w-full"></div>
+                        </button>
+                    </div>
+
+                    <div class="w-3/12 xl:pl-0 md:pl-4">
+                        <button class="focus:text-gray-800 text-gray-700 lg:w-full md:w-52 flex flex-col items-start" onclick="myFunction(2)">
+                            <div class="flex custom-header" id="demo3">
+                                <p class="text-lg leading-4">3</p>
+                                <p class="text-lg ml-2.5 leading-4">Import components</p>
+                            </div>
+                            <p class="text-sm leading-3 text-gray-600 mt-2 xl:ml-4 text-left">Add your organization name and logo</p>
+                            <div class="custom-border border-b border-gray-300 mt-4 w-full"></div>
+                        </button>
+                    </div>
+
+                    <div class="w-3/12 xl:pl-0 md:pl-4">
+                        <button class="focus:text-gray-800 text-gray-700 lg:w-full md:w-52 flex flex-col items-start" onclick="myFunction(3)">
+                            <div class="flex custom-header">
+                                <p class="text-lg leading-4">4</p>
+                                <p class="text-lg ml-2.5 leading-4">Add team members</p>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-3 mt-2 xl:ml-4 text-left">Add your organization name and logo</p>
+                            <p class="custom-border border-b border-gray-300 mt-4 w-full"></p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ////////////////hidden/////////////// -->
+            <div class="lg:hidden">
+                <div class="flex justify-center items-center py-6 sm:py-10 md:px-0 px-4">
+                    <div class="relative flex flex-col justify-start items-start w-full">
+                        <div class="flex rounded justify-between items-center w-full bg-white border border-gray-400 py-3 px-6">
+                            <div id="text" class="text-lg flex justify-start items-center space-x-2 font-medium leading-4 text-gray-800">
+                                <p id="textChange">1 Organization</p>
+                            </div>
+                            <button aria-label="toggler" onclick="showDropdown(true)" class="">
+                                <svg id="icon" class="transform rotate-180" width="28" height="28" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="dropdown" class="bg-white mt-2 flex-justify-start w-full flex-col shadow rounded border border-gray-400">
+                            <button id="clickedDiv0" onclick="select(0)" data-menu="" class="py-5 px-6 group bg-white text-left rounded-t w-full focus:outline-none leading-4">
+                                <div class="text-base flex justify-between w-full items-center leading-4 text-lg text-gray-700">
+                                    <p><span class="font-bold">1</span> Organization</p>
+                                </div>
+                                <p class="ml-4 text-sm mt-2 text-gray-600">Add your organization name and logo</p>
+                            </button>
+
+                            <button id="clickedDiv1" onclick="select(1)" data-menu="" class="py-5 px-6 group bg-white text-left w-full focus:outline-none leading-4 focus:text-gray-800">
+                                <div class="text-base flex justify-between w-full items-center leading-4 text-gray-700 text-lg">
+                                    <p><span class="font-bold">2</span> Create a collection</p>
+                                </div>
+                                <p class="ml-4 text-sm mt-2 text-gray-600">Add your organization name and logo</p>
+                            </button>
+                            <button id="clickedDiv2" onclick="select(2)" data-menu="" class="py-5 px-6 group bg-white text-left w-full focus:outline-none leading-4 focus:text-gray-800">
+                                <div class="text-base flex justify-between w-full items-center leading-4 text-gray-700 text-lg">
+                                    <p><span class="font-bold">3</span> Import components</p>
+                                </div>
+                                <p class="ml-4 text-sm mt-2 text-gray-600">Add your organization name and logo</p>
+                            </button>
+                            <button id="clickedDiv3" onclick="select(3)" data-menu="" class="py-5 px-6 group bg-white text-left rounded-b w-full focus:outline-none leading-4 focus:text-gray-800">
+                                <div class="text-base flex justify-between w-full items-center leading-4 text-gray-700 text-lg">
+                                    <p><span class="font-bold">4</span> Add team members</p>
+                                </div>
+                                <p class="ml-4 text-sm mt-2 text-gray-600">Add your organization name and logo</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ///////////////////////new//////////////////// -->
+        <section>
+            <div class="container mx-auto lg:mt-16">
+                <div class="px-7 md:p-0">
+                    <h1 class="text-3xl text-gray-800 font-bold">Company Details</h1>
+                    <p class="text-gray-600 mt-3 md:w-2/5 text-sm leading-5">Let’s get you setup in a jiffy, of course you can skip the process but we highly recommend you add this information for an optimal experience</p>
+                </div>
+                <!-- /////////////////2/////////// -->
+                <div class="mb-8 md:mb-0">
+                    <form class="md:w-96 md:mb-16 px-7 md:px-0">
+                        <p class="text-gray-800 text-sm mt-6 md:mt-12 font-medium">UPLOAD YOUR LOGO</p>
+                        <div class="border border-dotted rounded border-gray-400 text-center h-28 mt-2.5 md:mt-3 cursor-pointer">
+                            <p class="text-blue-400 mt-6 text-sm underline hover:text-blue-800 font-medium">Browse</p>
+                            <p class="text-gray-600 mt-4 text-sm font-medium">Or Drag and Drop to Upload</p>
+                        </div>
+
+                        <div class="mt-6 md:w-full">
+                            <p class="text-gray-800 text-sm font-medium">NAME OF YOUR ORGANIZATION</p>
+                            <input type="text" class="border border-gray-400 rounded w-full py-2 px-3 md:py-1 mt-3" />
+                        </div>
+                    </form>
+                    <div class="flex flex-col md:flex-row justify-end md:mt-2.5 space-y-4 md:space-y-0 px-7 md:px-0">
+                        <button class="text-gray-600 text-base hover:text-gray-800 leading-4 font-medium hidden md:block md:mr-5">Skip</button>
+
+                        <button class="text-base leading-4 font-medium bg-blue-700 py-4 px-12 text-white rounded hover:bg-blue-900">Next</button>
+                        <button class="text-gray-600 text-base font-medium leading-4 md:mr-5 md:hidden">Skip</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+  </body>
+</html>
